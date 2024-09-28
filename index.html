@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Agentic AI</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <form id="inputForm">
+            <div class="form-group">
+                <h2>Agentic AI</h2>
+                <label for="method">Choose a method:</label>
+                <select id="method" name="method" required>
+                    <option value="" disabled selected>Select an option</option>
+                    <option id="langchain" value="langchain">LangChain (Essay Writing Assistant)</option>
+                    <option id="autogen" value="autogen">AutoGen (Essay Writing Assistant)</option>
+                    <option id="langchainrag" value="langchainrag">LangChain (Adaptive RAG System)</option>
+                    <option id="autogenrag" value="autogenrag">AutoGen (Adaptive RAG System)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="user_input">Input:</label>
+                <textarea id="user_input" name="user_input" rows="4" required></textarea>
+            </div>
+
+            <button type="submit" id="submitButton" value="Submit">Submit</button>
+        </form>
+        <div id="resultContainer" class="result" style="display: none;">
+            <p id="resultText">Results will be displayed here.</p>
+        </div>
+        <div id="loaderContainer" style="display: none;">
+            <p>Loading...</p>
+        </div>
+    </div>
+
+    <script src="/static/js/scripts.js" defer></script>
+</body>
+</html> 
+
+
+
+
+
